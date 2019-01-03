@@ -201,10 +201,13 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         }
 
         const setIndex = (index: number) => {
-            this.currentIndex = index;
             if (this.props.onPageChanged && Number.isInteger(this.currentIndex)) {
-                this.props.onPageChanged(this.getCurrentPage());
+                if (this.currentIndex != index) {
+                    this.currentIndex = index;
+                    this.props.onPageChanged(this.getCurrentPage());
+                }
             }
+            this.currentIndex = index;
         };
 
         if (animated) {
