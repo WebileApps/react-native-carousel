@@ -1,0 +1,23 @@
+{
+    "name": "@webileapps/react-native-banner-carousel",
+    "version": "1.2.0",
+    "description": "React Native Banner carousel.",
+    "main": "index.js",
+    "scripts": {
+        "tsc": "tsc",
+        "build": "npm run tsc",
+        "plugin.tscwatch": "npm run tsc -- -w",
+        "plugin.prepare": "cd ../demo-expo && yarn remove @webileapps/react-native-banner-carousel && yarn add ../src",
+        "expo": "cd ../demo-expo && yarn start"
+    },
+    "keywords": [],
+    "author": "rajivnarayana@gmail.com",
+    "license": "ISC",
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*"
+    },
+    "devDependencies": {
+        "typescript": "~2.8.2"
+    }
+}

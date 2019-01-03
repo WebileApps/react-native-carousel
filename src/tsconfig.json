@@ -1,0 +1,15 @@
+// 20190103184046
+// https://raw.githubusercontent.com/f111fei/react-native-banner-carousel/master/tsconfig.json
+
+{
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "declaration": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }
