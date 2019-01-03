@@ -1,6 +1,6 @@
 {
     "name": "@webileapps/react-native-banner-carousel",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "React Native Banner carousel.",
     "main": "index.js",
     "scripts": {
@@ -22,6 +22,8 @@
         "react-native": "*"
     },
     "devDependencies": {
+        "@types/react": "^16.7.18",
+        "@types/react-native": "^0.57.25",
         "typescript": "~2.8.2"
     }
 }
