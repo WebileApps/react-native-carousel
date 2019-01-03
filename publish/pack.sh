@@ -25,6 +25,12 @@ pack() {
     node_modules/.bin/ncp "$ROOT_DIR"/LICENSE "$TO_SOURCE_DIR"/LICENSE
     node_modules/.bin/ncp "$ROOT_DIR"/README.md "$TO_SOURCE_DIR"/README.md
 
+    # compile package and copy files required by npm
+    echo 'Building /src...'
+    cd "$TO_SOURCE_DIR"
+    node_modules/.bin/tsc
+    cd ..
+
     echo 'Creating package...'
     # create package dir
     mkdir "$PACK_DIR"
