@@ -11,7 +11,11 @@
         "expo": "cd ../demo-expo && yarn start"
     },
     "keywords": [],
-    "author": "rajivnarayana@gmail.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WebileApps/react-native-carousel"
+    },
+    "author": "rajiv@webileapps.com",
     "license": "ISC",
     "peerDependencies": {
         "react": "*",
