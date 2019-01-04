@@ -201,7 +201,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         }
 
         const setIndex = (index: number) => {
-            if (this.props.onPageChanged && Number.isInteger(this.currentIndex)) {
+            if (this.props.onPageChanged && Number.isInteger(index)) {
                 if (this.currentIndex != index) {
                     this.currentIndex = index;
                     this.props.onPageChanged(this.getCurrentPage());
@@ -212,15 +212,9 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
 
         if (animated) {
             this.pageAnimation = this.props.animation(this.state.scrollValue, index);
-            const animationId = this.state.scrollValue.addListener((state: { value: number }) => {
-                setIndex(state.value);
-            });
+            setIndex(index);
             this.pageAnimation.start(() => {
-                this.state.scrollValue.removeListener(animationId);
-                setIndex(index);
                 this.pageAnimation = null;
-                this.loopJump();
-                cb();
             });
         } else {
             this.state.scrollValue.setValue(index);
